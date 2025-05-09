@@ -1,16 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helio Pet</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 </head>
+
 <body>
     <header></header>
-    <main></main>
+    <main>
+        <section class="product-container">
+            <div class="product-content">
+                <div class="image-gallery">
+                    <div class="main-image">
+                        <img id="mainImg" src="images/Dog1.png" alt="Main Image">
+                    </div>
+                    <div class="thumbnails">
+                        <img class="thumb" src="images/Dog2.png" alt="Thumbnail 2">
+                        <img class="thumb" src="images/Dog3.png" alt="Thumbnail 3">
+                        <img class="thumb" src="images/Dog4.png" alt="Thumbnail 4">
+                        <img class="thumb" src="images/Dog5.png" alt="Thumbnail 5">
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-description">
+                        <div>
+                            <span class="badge">Best Seller</span>
+                        </div>
+                        <div class="ratings">
+                            <div class="stars">
+                                <img id="star1" src="images/material-symbols_star.png" alt="">
+                                <div>
+                                    <img src="images/material-symbols_star.png" alt="">
+                                    <img src="images/material-symbols_star.png" alt="">
+                                    <img src="images/material-symbols_star.png" alt="">
+                                    <img src="images/material-symbols_star.png" alt="">
+                                </div>
+                            </div>
+                            <p>4.9 <span class="review">(1,021 reviews)</span></p>
+                        </div>
+
+                        <h2 class="product-title">Helio Pet Device <sup>TM</sup></h2>
+
+                        <div class="testimonial">
+                            <img src="images/Ellipse 843.png" alt="">
+                            <p>“We are BOTH so THANKFUL! I purchased this for my 12 <br>year old Lab mix as he's got
+                                mobility issues with the <br>back legs. It's been 3 weeks and already a difference!”</p>
+                        </div>
+
+                        <ul class="features">
+                            <li><img src="images/ic_outline-check.png" alt=""> Reduce aches & pains with 5-minute
+                                sessions.</li>
+                            <li id="li2"><img src="images/ic_outline-check.png" alt=""> Cold Laser Therapy helps with
+                                Pain, Inflammation & more.</li>
+                            <li><img src="images/ic_outline-check.png" alt=""> Professional Grade LLLT with 5 Laser
+                                Diodes.</li>
+                        </ul>
+                    </div>
+
+                    <div class="price-section">
+                        <p class="old-price">$<span id="compare-price">369.00</span></p>
+                        <p class="new-price">$<span id="selling-price">249.00</span></p>
+                    </div>
+
+                    <div class="cart-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="quantity-selector">
+                            <button class="qty-btn qty-btn-minus">-</button>
+                            <span class="qty">1</span>
+                            <button class="qty-btn qty-btn-plus">+</button>
+                        </div>
+                    </div>
+
+                    <div class="payment-icons">
+                        <img src="images/Payment.png" alt="">
+                    </div>
+
+                    <div class="guarantee-info">
+                        <div>
+                            <img style="width: 20px; height: 20px; object-fit: cover;"
+                                src="images/lucide_shield-check.png" alt="">
+                            <p><span class="blue">30 day money back</span> gua rantee</p>
+                        </div>
+                        <div>
+                            <img style="height: 18px; object-fit: cover; margin-right: 2px;"
+                                src="images/carbon_delivery-parcel.png" alt="">
+                            <p>Expected <span class="blue">delivery in 2–4</span> business days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
+
+    <div id="overlay" class="overlay hidden"></div>
+
+    <!-- Drawer -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="drawer-content">
+            <div class="drawer-heading">
+                <h3>Your Cart</h3>
+                <button onclick="closeCartDrawer()" class="close-btn"><img
+                        style="height: 13.5px; width: 13.5px; object-fit: cover;" src="images/close.png"
+                        alt="">
+                </button>
+            </div>
+            <div
+                style="padding: 18px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.14); display: flex; align-items: center; justify-content: space-between;">
+                <h6>Product</h6>
+                <h6>Total</h6>
+            </div>
+            <ul id="cart-items"></ul>
+            <div class="drawer-footer">
+                <div class="drawer-total">
+                    <p>Estimated total:</p>
+                    <p id="cart-total">$0.00</p>
+                </div>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
 
     <script src="JS/index.js"></script>
 </body>
+
 </html>
