@@ -21,8 +21,6 @@ thumbnails.forEach((thumb) => {
     const tempSrc = mainImg.src;
     mainImg.src = thumb.src;
     thumb.src = tempSrc;
-    mainImg.style.height = "536px";
-    thumb.style.height = "138px";
   });
 });
 
